@@ -1,20 +1,22 @@
-name: Surge  Deployment
-on: [push]
+name: Deploy Website
+
+on:
+  push:
+    branches: [ master ]
 
 jobs:
-    deploy:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v2
-            
-            - run: echo "Setting up NodeJs"
-            - name: Setup NodeJs
-              uses: actions/setup-node@v1
-              with:
-               node-version: 12.x
+  build:
 
-            - run: npm install -g surge
-            - run: echo "Deploying website"
-            - run: surge ./ urdu-expense-tracker-react.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
-          
-            - run: echo "Please visit => urdu-expense-tracker-react.surge.sh"
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install NodeJS
+      uses: actions/setup-node@v2-beta
+      with: 
+        node-version: 12
+    - name: Install Surge
+      run: npm install -g surge
+
+    - name: Run Surge
+      run: surge ./ bootcamp2020_naveed_expense.surge.sh --token ${{secrets.SURGE_TOKEN}}
