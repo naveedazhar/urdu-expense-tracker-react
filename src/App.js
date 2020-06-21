@@ -48,4 +48,5 @@ function App({ t }) {
   );
 }
 
+
 export default withNamespaces()(App);
