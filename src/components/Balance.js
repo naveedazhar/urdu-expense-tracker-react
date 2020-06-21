@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
-export const Balance = () => {
+export const Balance = ({t}) => {
   const { transactions } = useContext(GlobalContext);
 
   const amounts = transactions.map(transaction => transaction.amount);
@@ -10,7 +10,7 @@ export const Balance = () => {
 
   return (
     <>
-      <h4>Your Balance</h4>
+      <h4>{t("Your Balance")}</h4>
     <h1>${total}</h1>
     </>
   )

@@ -1,0 +1,15 @@
+{
+    "Expense Tracker": "Expense Tracker using react-i18next",
+    "Your Balance":"app kai khatai ka baqaya",
+    "Expense Tracker": "Expense Tracker",
+    "Your Balance" : "Your Balance",
+    "Income" : "Income",
+    "Expense" : "Expense",
+    "History" : "History",
+    "Add new transaction" : "Add new transaction",
+    "Details" : "Details",
+    "Enter Details" : "Enter Details",
+    "Amount" : "Amount",
+    "Amount Illustration" : "(negative - expense, positive - income)",
+    "Add transaction" : "Add transaction"
+}

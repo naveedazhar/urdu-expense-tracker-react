@@ -28,10 +28,13 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+
   return (<GlobalContext.Provider value={{
     transactions: state.transactions,
+    direction: state.direction,
     deleteTransaction,
     addTransaction
+    
   }}>
     {children}
   </GlobalContext.Provider>);

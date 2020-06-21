@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Header = () => {
+export const Header = ({t}) => {
   return (
     <h2>
-      Expense Tracker
+      {t("Expense Tracker")}
     </h2>
   )
 }

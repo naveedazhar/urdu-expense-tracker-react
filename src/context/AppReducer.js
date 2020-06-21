@@ -10,6 +10,11 @@ export default (state, action) => {
         ...state,
         transactions: [action.payload, ...state.transactions]
       }
+    case 'SET_DIRECTION':
+        return {
+          ...state,
+          direction: action.payload
+        }
     default:
       return state;
   }
