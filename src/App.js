@@ -34,7 +34,7 @@ function App({ t }) {
     <div dir="rtl">
     <GlobalProvider>
       <button onClick={() => {changeLanguage('ur')}}>اردو</button>
-      <button onClick={() => {changeLanguage('en')}}>en</button>
+      <button onClick={() => {changeLanguage('en')}}>english</button>
       <Header t={t} />
       <div className="container">
         <Balance t={t} />
