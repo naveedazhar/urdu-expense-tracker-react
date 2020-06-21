@@ -1,0 +1,20 @@
+name: Surge  Deployment
+on: [push]
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            
+            - run: echo "Setting up NodeJs"
+            - name: Setup NodeJs
+              uses: actions/setup-node@v1
+              with:
+               node-version: 12.x
+
+            - run: npm install -g surge
+            - run: echo "Deploying website"
+            - run: surge ./ urdu-expense-tracker-react.surge.sh --token ${{ secrets.SURGE_TOKEN }} 
+          
+            - run: echo "Please visit => urdu-expense-tracker-react.surge.sh"
